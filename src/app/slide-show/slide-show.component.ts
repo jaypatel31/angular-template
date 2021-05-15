@@ -6,7 +6,7 @@ import { GeneralServices } from '../general.services';
   templateUrl: './slide-show.component.html',
   styleUrls: ['./slide-show.component.css']
 })
-export class SlideShowComponent {
+export class SlideShowComponent implements OnInit {
 
 
 
@@ -15,9 +15,8 @@ export class SlideShowComponent {
 		private generalServices: GeneralServices
 	){}
 	
-	afterLoad(){
-		this.generalServices.carousel();
-		console.log("Hello");
+	ngOnInit(){
+		this.generalServices.startCarousel();
 	}
 	
 	
